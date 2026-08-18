@@ -29,6 +29,7 @@ All data is stored in a MySQL database with two core tables: `rega` and `transac
 ## 🗄️ Database Schema (MySQL)
 
 ### Table: `rega`
+```sql
 CREATE TABLE rega (
     username VARCHAR(100),
     password VARCHAR(50),
@@ -36,8 +37,10 @@ CREATE TABLE rega (
     country VARCHAR(50),
     balance DECIMAL(10,2)
 );
+```
 
 ### Table: `transactions`
+```sql
 CREATE TABLE transactions (
     id INT PRIMARY KEY AUTO_INCREMENT,
     transaction_id VARCHAR(50),
@@ -46,7 +49,7 @@ CREATE TABLE transactions (
     amount DECIMAL(10,2),
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+```
 
 **⚙️ Setup Instructions
 1.Clone the repository: git clone https://github.com/HuzeibKhan-prog/OnlineBankingPortal.git
