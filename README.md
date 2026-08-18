@@ -29,7 +29,6 @@ All data is stored in a MySQL database with two core tables: `rega` and `transac
 ## 🗄️ Database Schema (MySQL)
 
 ### Table: `rega`
-```sql
 CREATE TABLE rega (
     username VARCHAR(100),
     password VARCHAR(50),
@@ -39,7 +38,6 @@ CREATE TABLE rega (
 );
 
 ### Table: `transactions`
-```sql
 CREATE TABLE transactions (
     id INT PRIMARY KEY AUTO_INCREMENT,
     transaction_id VARCHAR(50),
