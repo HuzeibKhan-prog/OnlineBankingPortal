@@ -64,6 +64,7 @@ http://localhost:8080/OnlineBankingPortal
 
 
 📂 Project Structure
+```text
 OnlineBankingPortal/
 │
 ├── Web Pages/
@@ -92,7 +93,7 @@ OnlineBankingPortal/
 │   └── GlassFish Server 4.1.1 / Tomcat     # Application server
 │
 └── README.md
-
+```
 
 🎯 Future Enhancements
 1.Add deposit/withdraw functionality.
