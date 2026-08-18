@@ -51,7 +51,8 @@ CREATE TABLE transactions (
 );
 ```
 
-**⚙️ Setup Instructions
+⚙️ Setup Instructions
+```text
 1.Clone the repository: git clone https://github.com/HuzeibKhan-prog/OnlineBankingPortal.git
 2.Import the project into NetBeans.
 3.Configure GlassFish Server 4.1.1 (default) or Apache Tomcat.
@@ -61,7 +62,7 @@ String url = "jdbc:mysql://localhost:3306/onlinebanking?useSSL=false&allowPublic
 Connection con = DriverManager.getConnection(url, "root", "");
 6.Deploy the project and access via:
 http://localhost:8080/OnlineBankingPortal
-
+```
 
 📂 Project Structure
 ```text
@@ -101,5 +102,5 @@ OnlineBankingPortal/
 2.Implement email notifications for transactions.
 3.Enhance UI with Bootstrap/Material Design.
 4.Add admin panel for monitoring all users and transactions.
-**
+
 ```
