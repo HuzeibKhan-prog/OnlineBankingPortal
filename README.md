@@ -48,7 +48,9 @@ CREATE TABLE transactions (
     amount DECIMAL(10,2),
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-⚙️ Setup Instructions
+
+
+**⚙️ Setup Instructions
 1.Clone the repository: git clone https://github.com/HuzeibKhan-prog/OnlineBankingPortal.git
 2.Import the project into NetBeans.
 3.Configure GlassFish Server 4.1.1 (default) or Apache Tomcat.
@@ -89,7 +91,6 @@ OnlineBankingPortal/
 │   └── GlassFish Server 4.1.1 / Tomcat     # Application server
 │
 └── README.md
-<img width="750" height="506" alt="image" src="https://github.com/user-attachments/assets/6b681491-4424-4d4a-9a32-a2c5159395ce" />
 
 
 🎯 Future Enhancements
@@ -97,3 +98,4 @@ OnlineBankingPortal/
 2.Implement email notifications for transactions.
 3.Enhance UI with Bootstrap/Material Design.
 4.Add admin panel for monitoring all users and transactions.
+**
