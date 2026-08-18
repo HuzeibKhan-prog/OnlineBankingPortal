@@ -95,9 +95,11 @@ OnlineBankingPortal/
 └── README.md
 ```
 
-🎯 Future Enhancements
+###🎯 Future Enhancements
+```text
 1.Add deposit/withdraw functionality.
 2.Implement email notifications for transactions.
 3.Enhance UI with Bootstrap/Material Design.
 4.Add admin panel for monitoring all users and transactions.
 **
+```
