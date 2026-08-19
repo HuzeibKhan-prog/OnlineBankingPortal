@@ -1,4 +1,4 @@
-<%@page import="java.sql.*,com.bank.util.DBConnection"%>
+<%@page import="java.sql.*,db.DBConnection;"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     // Session Guard: Ensures user is logged in
@@ -16,14 +16,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
     <div class="container wide">
         <h2>Your Transaction History</h2>
-        
         <% if ("success".equals(request.getParameter("status"))) { %>
             <p class="success-msg">Transaction Completed Successfully!</p>
         <% } %>
-
         <table>
             <thead>
                 <tr>

@@ -1,4 +1,4 @@
-<%@page import="java.sql.*,com.bank.util.DBConnection"%>
+<%@page import="java.sql.*, db.DBConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String userName = (String) session.getAttribute("userName");
