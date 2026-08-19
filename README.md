@@ -96,6 +96,18 @@ OnlineBankingPortal/
 └── README.md
 ```
 
+<img width="350" height="250" alt="Screenshot 2026-08-19 192054" src="https://github.com/user-attachments/assets/31f258d8-012f-4509-8e8c-c4a3b49d12b6" />
+
+<img width="320" height="250" alt="image" src="https://github.com/user-attachments/assets/20659727-fd63-4803-bb4e-69fc12b4fab5" />
+
+<img width="300" height="250" alt="image" src="https://github.com/user-attachments/assets/def189d6-baa7-467d-a4d7-ddde895ce5dd" />
+
+<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/0bd7e078-556c-46d3-8849-5dd1042c639e" />
+
+<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/b92d6ac3-99a1-4112-aa09-60d1e1faa13a" />
+
+<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/84465005-f5d1-4ba7-af47-371605f00d05" />
+
 ###🎯 Future Enhancements
 ```text
 1.Add deposit/withdraw functionality.
