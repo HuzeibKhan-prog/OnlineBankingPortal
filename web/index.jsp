@@ -15,7 +15,7 @@
             initiating real-time fund transfers, and tracking detailed transaction histories.
         </p>
 
-        <div style="display: flex; gap: 10px;">
+        <div style="display: flex; gap: 20px;">
             <a href="login.jsp" style="width: 50%;"><button class="btn">Login</button></a>
             <a href="register.jsp" style="width: 50%;"><button class="btn">Register</button></a>
         </div>
