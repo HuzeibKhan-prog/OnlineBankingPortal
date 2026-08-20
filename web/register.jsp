@@ -42,7 +42,7 @@
 
             <button type="submit" class="btn">Register</button>
         </form>
-
+        <br>
         <p class="link-text">
             <a href="index.jsp">Back to Home</a>
         </p>

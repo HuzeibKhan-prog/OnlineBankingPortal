@@ -31,7 +31,7 @@
             
             <button type="submit" class="btn">Login</button>
         </form>
-        
+        <br>
         <p class="link-text">
             <a href="index.jsp">Back to Home</a>
         </p>
