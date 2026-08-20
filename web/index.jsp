@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Welcome to Online Banking Portal</h2>
+        <h2 style="text-align: center">Online Banking Portal</h2>
         
         <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;">
             Our platform provides a secure and seamless environment for managing account balances, 
