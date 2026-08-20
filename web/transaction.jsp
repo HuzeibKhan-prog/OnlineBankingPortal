@@ -44,7 +44,7 @@
             
             <button type="submit" class="btn">Send Money</button>
         </form>
-
+        <br>
         <p class="link-text">
             <a href="dashboard.jsp">Back to Dashboard</a>
         </p>

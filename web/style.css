@@ -1,140 +1,85 @@
-/* General Page Styling */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* { 
+    box-sizing: border-box; 
+    margin: 0; padding: 0; 
+    font-family: system-ui, sans-serif; 
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #333333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #f1f5f9;
+    color: #0f172a;
     min-height: 100vh;
-    padding: 20px;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
 }
 
-/* Card Container for Forms & Portals */
-.container {
-    background-color: #ffffff;
+.container, form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 450px;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.table-container { 
+    max-width: 800px; 
+} 
+
+h2, h3 { 
+    margin-bottom: 1rem; 
+    color: #1e293b; 
 }
 
-h2, h3 {
-    text-align: center;
-    color: #1a365d;
-    margin-bottom: 20px;
+label { 
+    font-size: 0.875rem; 
+    font-weight: 600; 
+    display: block; 
+    margin: 0.75rem 0 0.25rem; 
 }
 
-/* Form Groups & Inputs */
-.form-group {
-    margin-bottom: 15px;
+input {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline-color: #2563eb;
 }
 
-label {
+button, .btn {
     display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    color: #4a5568;
-    font-size: 14px;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-select {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #cbd5e0;
-    border-radius: 5px;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s ease;
-}
-
-input:focus, select:focus {
-    border-color: #3182ce;
-}
-
-/* Primary Button */
-.btn {
-    width: 100%;
-    background-color: #2b6cb0;
-    color: #ffffff;
+    padding: 0.75rem;
+    margin-top: 1.25rem;
+    background: #2563eb;
+    color: #fff;
     border: none;
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.2s ease;
-}
-
-.btn:hover {
-    background-color: #2c5282;
-}
-
-/* Links & Messages */
-.link-text {
+    border-radius: 6px;
+    font-weight: 600;
     text-align: center;
-    margin-top: 15px;
-    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+button:hover, .btn:hover { 
+    background: #1d4ed8; 
 }
 
-.link-text a {
-    color: #3182ce;
+a{
     text-decoration: none;
 }
 
-.link-text a:hover {
-    text-decoration: underline;
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 1rem; 
 }
 
-.error-msg {
-    color: #e53e3e;
-    text-align: center;
-    margin-top: 10px;
+th, td { 
+    padding: 0.75rem; 
+    text-align: left; 
+    border-bottom: 1px solid #e2e8f0; 
 }
 
-.success-msg {
-    color: #38a169;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-    font-size: 14px;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-th {
-    background-color: #f7fafc;
-    color: #4a5568;
-    font-weight: 600;
-}
-
-tr:hover {
-    background-color: #f8fafc;
-}
-
-/* Container modifier for wide content like tables */
-.container.wide {
-    max-width: 700px;
+th { 
+    background: #f8fafc; 
+    font-weight: 600; 
 }
