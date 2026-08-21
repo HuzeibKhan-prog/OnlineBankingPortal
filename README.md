@@ -78,14 +78,13 @@ OnlineBankingPortal/
 │   ├── transaction.jsp         # Transaction form (transfer money)
 │   └── style.css               # Stylesheet for UI
 │
-├── Source Packages/
-│   ├── com.bank.servlet/
+├── Source Packages/   
 │   │   ├── LoginServlet.java       # Handles login authentication
 │   │   ├── LogoutServlet.java      # Handles logout
 │   │   ├── RegistrationServlet.java# Handles new customer registration
 │   │   └── TransactionServlet.java # Handles money transfers
 │   │
-│   └── com.bank.util/
+│   └── db/
 │       └── DBConnection.java       # Utility class for JDBC connection
 │
 ├── Libraries/
@@ -95,18 +94,33 @@ OnlineBankingPortal/
 │
 └── README.md
 ```
+Online Banking Portal
 
-<img width="350" height="250" alt="Screenshot 2026-08-19 192054" src="https://github.com/user-attachments/assets/31f258d8-012f-4509-8e8c-c4a3b49d12b6" />
+<img width="750" height="475" alt="image" src="https://github.com/user-attachments/assets/c60929db-3e6e-44f9-834f-d2ab82d54a8b" />
 
-<img width="320" height="250" alt="image" src="https://github.com/user-attachments/assets/20659727-fd63-4803-bb4e-69fc12b4fab5" />
+Customer Registration 
 
-<img width="300" height="250" alt="image" src="https://github.com/user-attachments/assets/def189d6-baa7-467d-a4d7-ddde895ce5dd" />
+<img width="723" height="871" alt="image" src="https://github.com/user-attachments/assets/edb4287f-3e98-4ed5-80ca-39cd74b88261" />
 
-<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/0bd7e078-556c-46d3-8849-5dd1042c639e" />
+Customer Login
 
-<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/b92d6ac3-99a1-4112-aa09-60d1e1faa13a" />
+<img width="707" height="669" alt="image" src="https://github.com/user-attachments/assets/b720f7ae-1925-4d0f-9220-5cc355a01ef4" />
 
-<img width="350" height="250" alt="image" src="https://github.com/user-attachments/assets/84465005-f5d1-4ba7-af47-371605f00d05" />
+Dashboard 
+
+<img width="714" height="756" alt="image" src="https://github.com/user-attachments/assets/9b874749-edb7-446b-aeb3-5a242ffd7462" />
+
+Sending Money
+
+<img width="702" height="668" alt="image" src="https://github.com/user-attachments/assets/5e50de4c-6a26-4eca-88b8-6d90aaec90b0" />
+
+Transaction History
+<img width="1154" height="638" alt="image" src="https://github.com/user-attachments/assets/25325f41-c3d5-4ea9-9f75-4e9dae9272e6" />
+
+MySQL View (Database)
+<img width="1277" height="624" alt="image" src="https://github.com/user-attachments/assets/8d6ea2ca-4c92-456f-a7e3-5b929b609495" />
+
+
 
 ###🎯 Future Enhancements
 ```text
