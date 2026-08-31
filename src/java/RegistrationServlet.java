@@ -18,7 +18,7 @@ public class RegistrationServlet extends HttpServlet {
         String c = request.getParameter("country");
 
         try (Connection con = DBConnection.getConnection()) {
-            String query = "INSERT INTO rega (username, password, email, country) VALUES (?, ?, ?, ?)";
+            String query = "INSERT INTO rega (username, password, email, country, balance) VALUES (?, ?, ?, ?,100)";
             PreparedStatement psStmt = con.prepareStatement(query);
             psStmt.setString(1, un);
             psStmt.setString(2, ps);
