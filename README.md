@@ -27,7 +27,11 @@ All data is stored in a MySQL database with two core tables: `rega` and `transac
 ---
 
 ## 🗄️ Database Schema (MySQL)
-
+### Database:
+```sql
+CREATE database onlinebanking;
+use onlinbanking;
+```
 ### Table: `rega`
 ```sql
 CREATE TABLE rega (
@@ -121,8 +125,7 @@ MySQL View (Database)
 <img width="1277" height="624" alt="image" src="https://github.com/user-attachments/assets/8d6ea2ca-4c92-456f-a7e3-5b929b609495" />
 
 
-
-###🎯 Future Enhancements
+🎯 Future Enhancements
 ```text
 1.Add deposit/withdraw functionality.
 2.Implement email notifications for transactions.
