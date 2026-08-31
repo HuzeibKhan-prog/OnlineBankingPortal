@@ -41,8 +41,17 @@ CREATE TABLE rega (
     country VARCHAR(50),
     balance DECIMAL(10,2)
 );
+mysql> desc rega;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| username | varchar(100) | YES  |     | NULL    |       |
+| password | varchar(100) | YES  |     | NULL    |       |
+| email    | varchar(100) | NO   | PRI | NULL    |       |
+| country  | varchar(100) | YES  |     | NULL    |       |
+| balance  | double       | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
 ```
-
 ### Table: `transactions`
 ```sql
 CREATE TABLE transactions (
@@ -53,6 +62,17 @@ CREATE TABLE transactions (
     amount DECIMAL(10,2),
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+mysql> desc transactions;
++----------------+--------------+------+-----+-------------------+----------------+
+| Field          | Type         | Null | Key | Default           | Extra          |
++----------------+--------------+------+-----+-------------------+----------------+
+| id             | int(11)      | NO   | PRI | NULL              | auto_increment |
+| transaction_id | varchar(20)  | YES  | UNI | NULL              |                |
+| sender_email   | varchar(100) | YES  |     | NULL              |                |
+| receiver_email | varchar(100) | YES  |     | NULL              |                |
+| amount         | double       | YES  |     | NULL              |                |
+| timestamp      | timestamp    | NO   |     | CURRENT_TIMESTAMP |                |
++----------------+--------------+------+-----+-------------------+----------------+
 ```
 
 ⚙️ Setup Instructions
