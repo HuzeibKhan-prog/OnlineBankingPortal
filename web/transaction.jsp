@@ -8,63 +8,61 @@
 %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Transfer Money</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer Money - Online Banking Portal</title>
+    <link rel="stylesheet" type="text/css" href="style.css?v=2">
+</head>
+<body>
 
-        <div class="container">
-            <h2>Fund Transfer</h2>
+    <div class="page-container">
+        <div class="card">
+            <div class="section-heading">
+                <span>QUICK TRANSFER</span>
+                <h1>Fund Transfer</h1>
+                <p>Send money securely to another registered user.</p>
+            </div>
+
             <%
                 String status = request.getParameter("status");
-
-                if ("no_receiver".equals(status)) {
+                if (status != null) {
+                    if ("no_receiver".equals(status)) {
             %>
-            <script type="text/javascript">
-                alert("Transfer Failed: Recipient email does not exist!");
-            </script>
+                <div class="alert-error">Transfer Failed: Recipient email does not exist!</div>
             <%
-            } else if ("self_transfer".equals(status)) {
+                    } else if ("self_transfer".equals(status)) {
             %>
-            <script type="text/javascript">
-                alert("Transfer Failed: You cannot transfer money to your own account!");
-            </script>
+                <div class="alert-error">Transfer Failed: You cannot transfer money to your own account!</div>
             <%
-            } else if ("low_balance".equals(status)) {
+                    } else if ("low_balance".equals(status)) {
             %>
-            <script type="text/javascript">
-                alert("Transfer Failed: Insufficient balance!");
-            </script>
+                <div class="alert-error">Transfer Failed: Insufficient balance!</div>
             <%
-            } else if ("success".equals(status)) {
+                    } else if ("success".equals(status)) {
             %>
-            <script type="text/javascript">
-                alert("Success: Transfer completed successfully!");
-            </script>
+                <div class="alert-success">Success: Transfer completed successfully!</div>
             <%
+                    }
                 }
             %>
 
             <form action="TransactionServlet" method="post" onsubmit="this.querySelector('button[type=submit]').disabled = true;">
                 <div class="form-group">
-                    <label>Recipient Email:</label>
-                    <input type="email" name="receiver" required placeholder="recipient@example.com">
+                    <label for="receiver">Recipient Email:</label>
+                    <input type="email" id="receiver" name="receiver" class="form-control" placeholder="recipient@example.com" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Amount ($):</label>
-                    <input type="number" step="0.01" min="0.01" name="amount" required placeholder="0.00">
+                    <label for="amount">Amount ($):</label>
+                    <input type="number" id="amount" name="amount" class="form-control" step="0.01" min="0.01" placeholder="0.00" required>
                 </div>
 
-                <button type="submit" class="btn">Send Money</button>
+                <button type="submit" class="btn-primary">Send Money</button>
             </form>
-            <br>
-            <p class="link-text">
-                <a href="dashboard.jsp">Back to Dashboard</a>
-            </p>
-        </div>
 
-    </body>
+            <a href="dashboard.jsp" class="link-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+
+</body>
 </html>

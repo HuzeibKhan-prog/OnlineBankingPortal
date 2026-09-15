@@ -1,4 +1,4 @@
-<%@page import="java.sql.*,db.DBConnection;"%>
+<%@page import="java.sql.*,db.DBConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     // Session Guard: Ensures user is logged in
@@ -10,18 +10,26 @@
 %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Transaction History</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <div class="table-container">
-            <h2>Your Transaction History</h2>
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction History - Online Banking Portal</title>
+    <link rel="stylesheet" type="text/css" href="style.css?v=3">
+</head>
+<body>
+
+    <div class="page-container wide">
+        <div class="card">
+            <div class="section-heading">
+                <span>ACCOUNT ACTIVITY</span>
+                <h1>Transaction History</h1>
+                <p>View all past outgoing and incoming transfers.</p>
+            </div>
+
             <% if ("success".equals(request.getParameter("status"))) { %>
-            <p class="success-msg">Transaction Completed Successfully!</p>
+                <div class="alert-success">Transaction Completed Successfully!</div>
             <% } %>
-            <table>
+
+            <table class="data-table">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -53,57 +61,41 @@
                                 double amount = rs.getDouble("amount");
 
                                 boolean isSent = userEmail.equalsIgnoreCase(sender);
-                                String amountColor = isSent ? "#e53e3e" : "#276749";
+                                String amountColor = isSent ? "#dc2626" : "#16a34a";
                                 String prefix = isSent ? "-$" : "+$";
                     %>
                     <tr>
                         <td><%= rs.getString("transaction_id")%></td>
                         <td><%= sender%></td>
                         <td><%= rs.getString("receiver_email")%></td>
-                        <td style="font-weight: bold; color: <%= amountColor%>;">
+                        <td style="font-weight: 600; color: <%= amountColor%>;">
                             <%= prefix%><%= String.format("%.2f", amount)%>
                         </td>
                         <td><%= rs.getTimestamp("timestamp")%></td>
                     </tr>
                     <%
-                        }
-                        if (!hasRecords) {
+                            }
+                            if (!hasRecords) {
                     %>
                     <tr>
-                        <td colspan="5" style="text-align: center; color: #718096;">No transactions found.</td>
+                        <td colspan="5" style="text-align: center; color: #64748b;">No transactions found.</td>
                     </tr>
                     <%
                             }
                         } catch (Exception e) {
-                            out.println("<tr><td colspan='5' class='error-msg'>Error: " + e.getMessage() + "</td></tr>");
+                            out.println("<tr><td colspan='5' class='alert-error'>Error: " + e.getMessage() + "</td></tr>");
                         } finally {
-                            if (rs != null) {
-                                try {
-                                    rs.close();
-                                } catch (SQLException e) {
-                                }
-                            }
-                            if (ps != null) {
-                                try {
-                                    ps.close();
-                                } catch (SQLException e) {
-                                }
-                            }
-                            if (con != null) {
-                                try {
-                                    con.close();
-                                } catch (SQLException e) {
-                                }
-                            }
+                            if (rs != null) try { rs.close(); } catch (SQLException e) {}
+                            if (ps != null) try { ps.close(); } catch (SQLException e) {}
+                            if (con != null) try { con.close(); } catch (SQLException e) {}
                         }
                     %>
                 </tbody>
             </table>
-            <br>
-            <p class="link-text">
-                <a href="dashboard.jsp">Back to Dashboard</a>
-            </p>
-        </div>
 
-    </body>
+            <a href="dashboard.jsp" class="link-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+
+</body>
 </html>

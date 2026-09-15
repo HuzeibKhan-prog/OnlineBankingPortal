@@ -33,26 +33,29 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Dashboard - Online Banking Portal</title>
+    <link rel="stylesheet" type="text/css" href="style.css?v=2">
 </head>
 <body>
 
-    <div class="container">
-        <h2>Welcome, <%= userName %>!</h2>
-        <p class="link-text" style="margin-bottom: 20px;">
-            Logged in as: <strong><%= userEmail %></strong>
-        </p>
-        
-        <div style="background-color: #e2e8f0; padding: 20px; border-radius: 6px; text-align: center; margin-bottom: 20px;">
-            <p style="margin: 0; color: #4a5568; font-size: 14px; font-weight: bold;">Account Balance</p>
-            <h1 style="margin: 5px 0 0 0; color: #276749; font-size: 32px;">$<%= String.format("%.2f", currentBalance) %></h1>
-        </div>
+    <div class="page-container">
+        <div class="card">
+            <div class="section-heading">
+                <span>USER DASHBOARD</span>
+                <h1>Welcome, <%= userName %>!</h1>
+                <p>Logged in as: <strong><%= userEmail %></strong></p>
+            </div>
 
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-            <a href="transaction.jsp"><button class="btn">Make a Money Transfer</button></a>
-            <a href="history.jsp"><button class="btn" style="background-color: #4a5568;">View Transaction History</button></a>
-            <a href="LogoutServlet"><button class="btn" style="background-color: #e53e3e;">Logout</button></a>
+            <div class="balance-card">
+                <p class="balance-label">Account Balance</p>
+                <h1 class="balance-amount">$<%= String.format("%.2f", currentBalance) %></h1>
+            </div>
+
+            <div class="action-stack">
+                <a href="transaction.jsp" class="btn-primary" style="text-align: center; text-decoration: none;">Make a Money Transfer</a>
+                <a href="history.jsp" class="btn-primary btn-secondary" style="text-align: center; text-decoration: none;">View Transaction History</a>
+                <a href="LogoutServlet" class="btn-primary btn-danger" style="text-align: center; text-decoration: none;">Logout</a>
+            </div>
         </div>
     </div>
 

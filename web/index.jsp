@@ -4,20 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Online Banking Portal</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css?v=2">
 </head>
 <body>
-    <div class="container">
-        <h2 style="text-align: center">Online Banking Portal</h2>
-        
-        <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;">
-            Our platform provides a secure and seamless environment for managing account balances, 
-            initiating real-time fund transfers, and tracking detailed transaction histories.
-        </p>
 
-        <div style="display: flex; gap: 20px;">
-            <a href="login.jsp" style="width: 50%;"><button class="btn">Login</button></a>
-            <a href="register.jsp" style="width: 50%;"><button class="btn">Register</button></a>
+    <div class="page-container">
+        <div class="card">
+            <div class="section-heading">
+                <span>WELCOME TO</span>
+                <h1>Online Banking Portal</h1>
+                <p>Our platform provides a secure and seamless environment for managing account balances, initiating real-time fund transfers, and tracking detailed transaction histories.</p>
+            </div>
+
+            <div style="display: flex; gap: 12px; margin-top: 20px;">
+                <a href="login.jsp" class="btn-primary" style="text-align: center; text-decoration: none;">Login</a>
+                <a href="register.jsp" class="btn-primary" style="text-align: center; text-decoration: none; ">Register</a>
+            </div>
         </div>
     </div>
 
