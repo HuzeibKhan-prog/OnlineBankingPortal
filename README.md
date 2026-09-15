@@ -120,28 +120,31 @@ OnlineBankingPortal/
 ```
 Online Banking Portal
 
-<img width="750" height="475" alt="image" src="https://github.com/user-attachments/assets/c60929db-3e6e-44f9-834f-d2ab82d54a8b" />
+<img width="707" height="351" alt="image" src="https://github.com/user-attachments/assets/37e88e2c-2e87-4c46-989d-10f886bce7f3" />
 
 Customer Registration 
 
-<img width="723" height="871" alt="image" src="https://github.com/user-attachments/assets/edb4287f-3e98-4ed5-80ca-39cd74b88261" />
+<img width="612" height="443" alt="image" src="https://github.com/user-attachments/assets/c997ba3b-42ec-4505-b5ed-4bb63f8ea013" />
 
 Customer Login
 
-<img width="707" height="669" alt="image" src="https://github.com/user-attachments/assets/b720f7ae-1925-4d0f-9220-5cc355a01ef4" />
+<img width="563" height="390" alt="image" src="https://github.com/user-attachments/assets/2c356533-1c20-41af-883e-de03339ee4dd" />
 
 Dashboard 
 
-<img width="714" height="756" alt="image" src="https://github.com/user-attachments/assets/9b874749-edb7-446b-aeb3-5a242ffd7462" />
+<img width="484" height="416" alt="image" src="https://github.com/user-attachments/assets/0e4ff4c4-90a9-4f69-9343-52ff327b6329" />
 
 Sending Money
 
-<img width="702" height="668" alt="image" src="https://github.com/user-attachments/assets/5e50de4c-6a26-4eca-88b8-6d90aaec90b0" />
+<img width="445" height="383" alt="image" src="https://github.com/user-attachments/assets/644e68fc-cf03-4a86-839f-677423149a5c" />
 
 Transaction History
-<img width="1154" height="638" alt="image" src="https://github.com/user-attachments/assets/25325f41-c3d5-4ea9-9f75-4e9dae9272e6" />
+
+<img width="755" height="413" alt="image" src="https://github.com/user-attachments/assets/16da8f12-8982-4d95-8987-b15d0aa97a7c" />
+<img width="726" height="326" alt="image" src="https://github.com/user-attachments/assets/769367a8-8bdc-42cd-ace2-a49ee05fa974" />
 
 MySQL View (Database)
+
 <img width="1277" height="624" alt="image" src="https://github.com/user-attachments/assets/8d6ea2ca-4c92-456f-a7e3-5b929b609495" />
 
 
