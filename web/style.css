@@ -1,7 +1,7 @@
 /* General Layout & Fonts */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   background-color: #ebf1f6;
+    background-color: #ebf1f6;
     color: #0f172a;
     margin: 0;
     padding: 0;
@@ -106,6 +106,7 @@ body {
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
     margin-top: 10px;
+    box-sizing: border-box;
 }
 
 .btn-primary:hover {
