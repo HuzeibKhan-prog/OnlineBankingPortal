@@ -132,7 +132,7 @@ Customer Login
 
 Dashboard 
 
-<img width="484" height="416" alt="image" src="https://github.com/user-attachments/assets/0e4ff4c4-90a9-4f69-9343-52ff327b6329" />
+<img width="456" height="422" alt="image" src="https://github.com/user-attachments/assets/d6014ddc-d320-4c5b-b3c0-f5af36fa9408" />
 
 Sending Money
 
