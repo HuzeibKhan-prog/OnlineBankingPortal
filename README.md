@@ -124,24 +124,29 @@ Online Banking Portal
 
 Customer Registration 
 
-<img width="612" height="443" alt="image" src="https://github.com/user-attachments/assets/c997ba3b-42ec-4505-b5ed-4bb63f8ea013" />
+<img width="406" height="440" alt="image" src="https://github.com/user-attachments/assets/50ec1cdd-a27c-421f-ae8e-cf3242bcf779" />
+
 
 Customer Login
 
-<img width="563" height="390" alt="image" src="https://github.com/user-attachments/assets/2c356533-1c20-41af-883e-de03339ee4dd" />
+<img width="413" height="374" alt="image" src="https://github.com/user-attachments/assets/bd18a801-c044-432e-8df6-2ff9971f3ac1" />
+
+
+
 
 Dashboard 
 
-<img width="456" height="422" alt="image" src="https://github.com/user-attachments/assets/d6014ddc-d320-4c5b-b3c0-f5af36fa9408" />
+<img width="384" height="425" alt="image" src="https://github.com/user-attachments/assets/f641fe3a-ef3b-4b08-a731-bfd50571fbc0" />
+
 
 Sending Money
 
-<img width="445" height="383" alt="image" src="https://github.com/user-attachments/assets/644e68fc-cf03-4a86-839f-677423149a5c" />
+<img width="383" height="437" alt="image" src="https://github.com/user-attachments/assets/fbc618d2-6ec0-42da-b7e0-43075972d4ed" />
+
 
 Transaction History
+<img width="693" height="332" alt="image" src="https://github.com/user-attachments/assets/776301ce-4e5a-4e13-8bfa-ee3ef9efe558" />
 
-<img width="755" height="413" alt="image" src="https://github.com/user-attachments/assets/16da8f12-8982-4d95-8987-b15d0aa97a7c" />
-<img width="726" height="326" alt="image" src="https://github.com/user-attachments/assets/769367a8-8bdc-42cd-ace2-a49ee05fa974" />
 
 MySQL View (Database)
 
