@@ -56,7 +56,8 @@
                             boolean hasRecords = false;
                             while (rs.next()) {
                                 hasRecords = true;
-
+                                
+                                String txnId = rs.getString("transaction_id");
                                 String sender = rs.getString("sender_email");
                                 double amount = rs.getDouble("amount");
 
@@ -72,6 +73,13 @@
                             <%= prefix%><%= String.format("%.2f", amount)%>
                         </td>
                         <td><%= rs.getTimestamp("timestamp")%></td>
+                        <td>
+                            <!-- NEW: Delete Form sending transaction ID -->
+                            <form action="DeleteTransactionServlet" method="post" style="margin: 0;" onsubmit="return confirm('Are you sure you want to delete this history record?');">
+                                <input type="hidden" name="txnId" value="<%= txnId %>">
+                                <button type="submit" class="btn-danger-small" style="background-color: #dc2626; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 12px;">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                     <%
                             }

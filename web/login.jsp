@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="password">Password:</label>
+                    <label for="password">UPI Password:</label>
                     <input type="password" id="password" name="t2" class="form-control" placeholder="Enter your password" required>
                 </div>
 

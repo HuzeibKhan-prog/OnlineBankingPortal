@@ -1,3 +1,4 @@
+
 import java.io.*;
 import java.sql.*;
 import javax.servlet.*;
@@ -5,10 +6,11 @@ import javax.servlet.http.*;
 import db.DBConnection;
 
 public class TransactionServlet extends HttpServlet {
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         HttpSession session = request.getSession(false);
         if (session == null || session.getAttribute("userEmail") == null) {
             response.sendRedirect("login.jsp");
@@ -18,6 +20,7 @@ public class TransactionServlet extends HttpServlet {
         String sender = (String) session.getAttribute("userEmail");
         String receiver = request.getParameter("receiver");
         double transferAmount = Double.parseDouble(request.getParameter("amount"));
+        String enteredPassword = request.getParameter("password");
 
         // 1. Prevent self-transfer
         if (sender.equalsIgnoreCase(receiver)) {
@@ -30,13 +33,32 @@ public class TransactionServlet extends HttpServlet {
             con = DBConnection.getConnection();
             // Enable manual transaction management
             con.setAutoCommit(false);
+            
+            PreparedStatement passCheck = con.prepareStatement("SELECT password FROM rega WHERE email = ?");
+            passCheck.setString(1, sender);
+            ResultSet rsPass = passCheck.executeQuery();
+
+            if (rsPass.next()) {
+                String storedPassword = rsPass.getString("password");
+
+                // Compare entered password with database record
+                if (!storedPassword.equals(enteredPassword)) {
+                    con.rollback();
+                    response.sendRedirect("transaction.jsp?status=invalid_password");
+                    return;
+                }
+            } else {
+                con.rollback();
+                response.sendRedirect("transaction.jsp?status=error");
+                return;
+            }
             // 2. Check if recipient exists in 'rega' table
             PreparedStatement checkReceiver = con.prepareStatement("SELECT balance FROM rega WHERE email = ?");
             checkReceiver.setString(1, receiver);
             ResultSet rsReceiver = checkReceiver.executeQuery();
 
             if (!rsReceiver.next()) {
-                con.rollback(); 
+                con.rollback();
                 response.sendRedirect("transaction.jsp?status=no_receiver");
                 return;
             }
@@ -49,7 +71,7 @@ public class TransactionServlet extends HttpServlet {
                 double currentBalance = rsSender.getDouble("balance");
 
                 if (currentBalance < transferAmount) {
-                    con.rollback(); 
+                    con.rollback();
                     response.sendRedirect("transaction.jsp?status=low_balance");
                     return;
                 }
@@ -65,10 +87,10 @@ public class TransactionServlet extends HttpServlet {
             addPs.setString(2, receiver);
             addPs.executeUpdate();
             // 6. Generate unique Transaction ID (e.g., TXN84920481)
-            String txnId = "TXN" + (int)(Math.random() * 90000000 + 10000000);
+            String txnId = "TXN" + (int) (Math.random() * 90000000 + 10000000);
             // 7. Record entry into history table
             PreparedStatement insertTx = con.prepareStatement(
-                "INSERT INTO transactions (transaction_id, sender_email, receiver_email, amount) VALUES (?, ?, ?, ?)"
+                    "INSERT INTO transactions (transaction_id, sender_email, receiver_email, amount) VALUES (?, ?, ?, ?)"
             );
             insertTx.setString(1, txnId);
             insertTx.setString(2, sender);
@@ -81,16 +103,20 @@ public class TransactionServlet extends HttpServlet {
 
         } catch (Exception e) {
             if (con != null) {
-                try { con.rollback(); } catch (Exception ex) {} 
+                try {
+                    con.rollback();
+                } catch (Exception ex) {
+                }
             }
             e.printStackTrace();
             response.sendRedirect("transaction.jsp?status=error");
         } finally {
             if (con != null) {
-                try { 
-                    con.setAutoCommit(true); 
-                    con.close(); 
-                } catch (Exception e) {}
+                try {
+                    con.setAutoCommit(true);
+                    con.close();
+                } catch (Exception e) {
+                }
             }
         }
     }
